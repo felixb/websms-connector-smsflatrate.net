@@ -26,6 +26,56 @@
         android:key="password"
         android:title="@string/connector_appkey" />
 
+    <PreferenceScreen android:title="@string/connector_subconnectors" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="show_gw1"
+            android:summaryOff="@string/disabled"
+            android:summaryOn="@string/enabled"
+            android:title="@string/connector_gw1_name" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="show_gw2"
+            android:summaryOff="@string/disabled"
+            android:summaryOn="@string/enabled"
+            android:title="@string/connector_gw2_name" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="show_gw3"
+            android:summaryOff="@string/disabled"
+            android:summaryOn="@string/enabled"
+            android:title="@string/connector_gw3_name" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="show_gw4"
+            android:summaryOff="@string/disabled"
+            android:summaryOn="@string/enabled"
+            android:title="@string/connector_gw4_name" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="show_gw10"
+            android:summaryOff="@string/disabled"
+            android:summaryOn="@string/enabled"
+            android:title="@string/connector_gw10_name" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="show_gw11"
+            android:summaryOff="@string/disabled"
+            android:summaryOn="@string/enabled"
+            android:title="@string/connector_gw11_name" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="show_gw20"
+            android:summaryOff="@string/disabled"
+            android:summaryOn="@string/enabled"
+            android:title="@string/connector_gw20_name" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="show_gw21"
+            android:summaryOff="@string/disabled"
+            android:summaryOn="@string/enabled"
+            android:title="@string/connector_gw21_name" />
+    </PreferenceScreen>
     <PreferenceScreen
         android:key="appkey_help"
         android:title="@string/connector_appkey_help_title" />

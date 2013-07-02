@@ -69,44 +69,61 @@ public final class ConnectorSmsflatratenet extends BasicConnector {
 	public ConnectorSpec initSpec(final Context context) {
 		String name = context.getString(R.string.connector_name);
 		ConnectorSpec c = new ConnectorSpec(name);
-		c.setAuthor(// .
-		context.getString(R.string.connector_author));
+		c.setAuthor(context.getString(R.string.connector_author));
 		c.setBalance(null);
 		c.setCapabilities(ConnectorSpec.CAPABILITIES_UPDATE
 				| ConnectorSpec.CAPABILITIES_SEND
 				| ConnectorSpec.CAPABILITIES_PREFS);
-		c.addSubConnector(ID_GW1,
-				context.getString(R.string.conenctor_gw1_name),
-				SubConnectorSpec.FEATURE_MULTIRECIPIENTS
-						| SubConnectorSpec.FEATURE_SENDLATER);
-		c.addSubConnector(ID_GW2,
-				context.getString(R.string.conenctor_gw2_name),
-				SubConnectorSpec.FEATURE_MULTIRECIPIENTS
-						| SubConnectorSpec.FEATURE_SENDLATER);
-		c.addSubConnector(ID_GW3,
-				context.getString(R.string.conenctor_gw3_name),
-				SubConnectorSpec.FEATURE_MULTIRECIPIENTS
-						| SubConnectorSpec.FEATURE_SENDLATER);
-		c.addSubConnector(ID_GW4,
-				context.getString(R.string.conenctor_gw4_name),
-				SubConnectorSpec.FEATURE_MULTIRECIPIENTS
-						| SubConnectorSpec.FEATURE_SENDLATER);
-		c.addSubConnector(ID_GW10,
-				context.getString(R.string.conenctor_gw10_name),
-				SubConnectorSpec.FEATURE_MULTIRECIPIENTS
-						| SubConnectorSpec.FEATURE_SENDLATER);
-		c.addSubConnector(ID_GW11,
-				context.getString(R.string.conenctor_gw11_name),
-				SubConnectorSpec.FEATURE_MULTIRECIPIENTS
-						| SubConnectorSpec.FEATURE_SENDLATER);
-		c.addSubConnector(ID_GW20,
-				context.getString(R.string.conenctor_gw20_name),
-				SubConnectorSpec.FEATURE_MULTIRECIPIENTS
-						| SubConnectorSpec.FEATURE_SENDLATER);
-		c.addSubConnector(ID_GW21,
-				context.getString(R.string.conenctor_gw21_name),
-				SubConnectorSpec.FEATURE_MULTIRECIPIENTS
-						| SubConnectorSpec.FEATURE_SENDLATER);
+		SharedPreferences p = PreferenceManager
+				.getDefaultSharedPreferences(context);
+		if (p.getBoolean("show_gw" + ID_GW1, true)) {
+			c.addSubConnector(ID_GW1,
+					context.getString(R.string.conenctor_gw1_name),
+					SubConnectorSpec.FEATURE_MULTIRECIPIENTS
+							| SubConnectorSpec.FEATURE_SENDLATER);
+		}
+		if (p.getBoolean("show_gw" + ID_GW2, true)) {
+			c.addSubConnector(ID_GW2,
+					context.getString(R.string.conenctor_gw2_name),
+					SubConnectorSpec.FEATURE_MULTIRECIPIENTS
+							| SubConnectorSpec.FEATURE_SENDLATER);
+		}
+		if (p.getBoolean("show_gw" + ID_GW3, true)) {
+			c.addSubConnector(ID_GW3,
+					context.getString(R.string.conenctor_gw3_name),
+					SubConnectorSpec.FEATURE_MULTIRECIPIENTS
+							| SubConnectorSpec.FEATURE_SENDLATER);
+		}
+		if (p.getBoolean("show_gw" + ID_GW4, true)) {
+			c.addSubConnector(ID_GW4,
+					context.getString(R.string.conenctor_gw4_name),
+					SubConnectorSpec.FEATURE_MULTIRECIPIENTS
+							| SubConnectorSpec.FEATURE_SENDLATER);
+		}
+		if (p.getBoolean("show_gw" + ID_GW10, true)) {
+			c.addSubConnector(ID_GW10,
+					context.getString(R.string.conenctor_gw10_name),
+					SubConnectorSpec.FEATURE_MULTIRECIPIENTS
+							| SubConnectorSpec.FEATURE_SENDLATER);
+		}
+		if (p.getBoolean("show_gw" + ID_GW11, true)) {
+			c.addSubConnector(ID_GW11,
+					context.getString(R.string.conenctor_gw11_name),
+					SubConnectorSpec.FEATURE_MULTIRECIPIENTS
+							| SubConnectorSpec.FEATURE_SENDLATER);
+		}
+		if (p.getBoolean("show_gw" + ID_GW20, true)) {
+			c.addSubConnector(ID_GW20,
+					context.getString(R.string.conenctor_gw20_name),
+					SubConnectorSpec.FEATURE_MULTIRECIPIENTS
+							| SubConnectorSpec.FEATURE_SENDLATER);
+		}
+		if (p.getBoolean("show_gw" + ID_GW21, true)) {
+			c.addSubConnector(ID_GW21,
+					context.getString(R.string.conenctor_gw21_name),
+					SubConnectorSpec.FEATURE_MULTIRECIPIENTS
+							| SubConnectorSpec.FEATURE_SENDLATER);
+		}
 		return c;
 	}
 

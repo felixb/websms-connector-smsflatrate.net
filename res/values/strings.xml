@@ -29,14 +29,17 @@
     <string name="connector_appkey_help">You need an account on smsflatrate.net, please register. Go to the user login on the menu item "Appkey” an use the following license number: 217075044 to generate your own Appkey. Set this Appkey in your app in the menue "Settings"- done!</string>
     <string name="connector_support" translatable="false">Support</string>
     <string name="connector_support_hint" translatable="false">Kloppe Media\nsmsflatrate.net\nPostfach 1444\n91536 Rothenburg\nGERMANY\n\nWeb: www.smsflatrate.net\nMail: service@smsflatrate.net\n\nSpecial thanks to Felix Bechstein, WebSMS</string>
-    <string name="conenctor_gw1_name">(1) DE, with sender id</string>
-    <string name="conenctor_gw2_name">(2) INT, with sender id</string>
-    <string name="conenctor_gw3_name">(3) DE, w/o sender id</string>
-    <string name="conenctor_gw4_name">(4) INT, w/o sender id</string>
-    <string name="conenctor_gw10_name">(10) High Quality DE, with sender id</string>
-    <string name="conenctor_gw11_name">(11) High Quality INT, with sender id</string>
-    <string name="conenctor_gw20_name">(20) Smart DE, w/o sender id</string>
-    <string name="conenctor_gw21_name">(21) Smart INT, w/o sender id</string>
+    <string name="connector_subconnectors">SubConnectors</string>
+    <string name="enabled">Enabled</string>
+    <string name="disabled">Disabled</string>
+    <string name="connector_gw1_name">(1) DE, with sender id</string>
+    <string name="connector_gw2_name">(2) INT, with sender id</string>
+    <string name="connector_gw3_name">(3) DE, w/o sender id</string>
+    <string name="connector_gw4_name">(4) INT, w/o sender id</string>
+    <string name="connector_gw10_name">(10) High Quality DE, with sender id</string>
+    <string name="connector_gw11_name">(11) High Quality INT, with sender id</string>
+    <string name="connector_gw20_name">(20) Smart DE, w/o sender id</string>
+    <string name="connector_gw21_name">(21) Smart INT, w/o sender id</string>
     <string name="connector_error_110">Invalid gateway key or your account is locked</string>
     <string name="connector_error_140">Invalid AppKey</string>
     <string name="connector_error_150">You have tried to send to an international phone number through a gateway determined to handle german receivers only. Please use an international Gateway-Type.</string>
