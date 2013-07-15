@@ -78,49 +78,49 @@ public final class ConnectorSmsflatratenet extends BasicConnector {
 				.getDefaultSharedPreferences(context);
 		if (p.getBoolean("show_gw" + ID_GW1, true)) {
 			c.addSubConnector(ID_GW1,
-					context.getString(R.string.conenctor_gw1_name),
+					context.getString(R.string.connector_gw1_name),
 					SubConnectorSpec.FEATURE_MULTIRECIPIENTS
 							| SubConnectorSpec.FEATURE_SENDLATER);
 		}
 		if (p.getBoolean("show_gw" + ID_GW2, true)) {
 			c.addSubConnector(ID_GW2,
-					context.getString(R.string.conenctor_gw2_name),
+					context.getString(R.string.connector_gw2_name),
 					SubConnectorSpec.FEATURE_MULTIRECIPIENTS
 							| SubConnectorSpec.FEATURE_SENDLATER);
 		}
-		if (p.getBoolean("show_gw" + ID_GW3, true)) {
+		if (p.getBoolean("show_gw" + ID_GW3, false)) {
 			c.addSubConnector(ID_GW3,
-					context.getString(R.string.conenctor_gw3_name),
+					context.getString(R.string.connector_gw3_name),
 					SubConnectorSpec.FEATURE_MULTIRECIPIENTS
 							| SubConnectorSpec.FEATURE_SENDLATER);
 		}
-		if (p.getBoolean("show_gw" + ID_GW4, true)) {
+		if (p.getBoolean("show_gw" + ID_GW4, false)) {
 			c.addSubConnector(ID_GW4,
-					context.getString(R.string.conenctor_gw4_name),
+					context.getString(R.string.connector_gw4_name),
 					SubConnectorSpec.FEATURE_MULTIRECIPIENTS
 							| SubConnectorSpec.FEATURE_SENDLATER);
 		}
-		if (p.getBoolean("show_gw" + ID_GW10, true)) {
+		if (p.getBoolean("show_gw" + ID_GW10, false)) {
 			c.addSubConnector(ID_GW10,
-					context.getString(R.string.conenctor_gw10_name),
+					context.getString(R.string.connector_gw10_name),
 					SubConnectorSpec.FEATURE_MULTIRECIPIENTS
 							| SubConnectorSpec.FEATURE_SENDLATER);
 		}
-		if (p.getBoolean("show_gw" + ID_GW11, true)) {
+		if (p.getBoolean("show_gw" + ID_GW11, false)) {
 			c.addSubConnector(ID_GW11,
-					context.getString(R.string.conenctor_gw11_name),
+					context.getString(R.string.connector_gw11_name),
 					SubConnectorSpec.FEATURE_MULTIRECIPIENTS
 							| SubConnectorSpec.FEATURE_SENDLATER);
 		}
 		if (p.getBoolean("show_gw" + ID_GW20, true)) {
 			c.addSubConnector(ID_GW20,
-					context.getString(R.string.conenctor_gw20_name),
+					context.getString(R.string.connector_gw20_name),
 					SubConnectorSpec.FEATURE_MULTIRECIPIENTS
 							| SubConnectorSpec.FEATURE_SENDLATER);
 		}
 		if (p.getBoolean("show_gw" + ID_GW21, true)) {
 			c.addSubConnector(ID_GW21,
-					context.getString(R.string.conenctor_gw21_name),
+					context.getString(R.string.connector_gw21_name),
 					SubConnectorSpec.FEATURE_MULTIRECIPIENTS
 							| SubConnectorSpec.FEATURE_SENDLATER);
 		}
