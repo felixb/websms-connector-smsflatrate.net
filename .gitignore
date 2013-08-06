@@ -3,3 +3,4 @@ gen
 .ant-targets-build.xml
 local.properties
 build.properties
+.settings/org.eclipse.jdt.core.prefs
