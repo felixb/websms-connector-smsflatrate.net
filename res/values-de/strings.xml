@@ -33,6 +33,8 @@
     <string name="connector_gw11_name">(11) High Quality INT, mit Absender</string>
     <string name="connector_gw20_name">(20) Smart DE, ohne Absender</string>
     <string name="connector_gw21_name">(21) Smart INT, ohne Absender</string>
+    <string name="connector_gw30_name">(30) Text2Speech Anruf</string>
+    <string name="speekers_summary">Wähle Gateway 30 um einen Text2Speech Anruf zu starten. Dein Text wird daraufhin am Telefon vorgelesen. Die Sprache kannst du hier einstellen.</string>
     <string name="connector_error_110">Falscher Schnittstellen-Key oder Ihr Account ist gesperrt</string>
     <string name="connector_error_140">Ungültiger AppKey</string>
     <string name="connector_error_150">Sie haben versucht an eine internationale Handynummer eines Gateways, das ausschließlich für den Versand nach Deutschland bestimmt ist, zu senden. Bitte internationales Gateway verwenden.</string>

@@ -64,6 +64,8 @@ public final class ConnectorSmsflatratenet extends BasicConnector {
 	private static final String ID_GW20 = "20";
 	/** SubConnector id: Gateway 21. */
 	private static final String ID_GW21 = "21";
+	/** SubConnector id: Gateway 30. */
+	private static final String ID_GW30 = "30";
 
 	@Override
 	public ConnectorSpec initSpec(final Context context) {
@@ -121,6 +123,12 @@ public final class ConnectorSmsflatratenet extends BasicConnector {
 		if (p.getBoolean("show_gw" + ID_GW21, true)) {
 			c.addSubConnector(ID_GW21,
 					context.getString(R.string.connector_gw21_name),
+					SubConnectorSpec.FEATURE_MULTIRECIPIENTS
+							| SubConnectorSpec.FEATURE_SENDLATER);
+		}
+		if (p.getBoolean("show_gw" + ID_GW30, true)) {
+			c.addSubConnector(ID_GW30,
+					context.getString(R.string.connector_gw30_name),
 					SubConnectorSpec.FEATURE_MULTIRECIPIENTS
 							| SubConnectorSpec.FEATURE_SENDLATER);
 		}
@@ -280,6 +288,12 @@ public final class ConnectorSmsflatratenet extends BasicConnector {
 				if (r.contains(";")) {
 					d.add(new BasicNameValuePair("bulk", "1"));
 				}
+			}
+			if (ID_GW30.equals(command.getSelectedSubConnector())) {
+				SharedPreferences p = PreferenceManager
+						.getDefaultSharedPreferences(context);
+				String speaker = p.getString("speaker", "Stefan");
+				d.add(new BasicNameValuePair("voice", speaker));
 			}
 		}
 	}

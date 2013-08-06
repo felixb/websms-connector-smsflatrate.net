@@ -75,6 +75,21 @@
             android:summaryOff="@string/disabled"
             android:summaryOn="@string/enabled"
             android:title="@string/connector_gw21_name" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="show_gw30"
+            android:summaryOff="@string/disabled"
+            android:summaryOn="@string/enabled"
+            android:title="@string/connector_gw30_name" />
+
+        <ListPreference
+            android:defaultValue="Stefan"
+            android:dependency="show_gw30"
+            android:entries="@array/speakers_entries"
+            android:entryValues="@array/speakers_values"
+            android:key="speaker"
+            android:summary="@string/speekers_summary"
+            android:title="@string/connector_gw30_name" />
     </PreferenceScreen>
     <PreferenceScreen
         android:key="appkey_help"

@@ -40,9 +40,36 @@
     <string name="connector_gw11_name">(11) High Quality INT, with sender id</string>
     <string name="connector_gw20_name">(20) Smart DE, w/o sender id</string>
     <string name="connector_gw21_name">(21) Smart INT, w/o sender id</string>
+    <string name="connector_gw30_name">(30) Text2Speech call</string>
+    <string name="speekers_summary">Choose Gateway 30 for Text2Speech calls. Your text message gets read out on the phone. Choose language here.</string>
     <string name="connector_error_110">Invalid gateway key or your account is locked</string>
     <string name="connector_error_140">Invalid AppKey</string>
     <string name="connector_error_150">You have tried to send to an international phone number through a gateway determined to handle german receivers only. Please use an international Gateway-Type.</string>
     <string name="connector_error_404">Unknown error. Please urgently contact support (service@smsflatrate.net).</string>
+
+    <string-array name="speakers_entries" translatable="false">
+        <item>Stefan (DE)</item>
+        <item>Katrin (DE)</item>
+        <item>Dave (U.S. EN)</item>
+        <item>Susan (U.S. EN)</item>
+        <item>Simon (EN)</item>
+        <item>Kate (EN)</item>
+        <item>Bernard (FR)</item>
+        <item>Florence (FR)</item>
+        <item>Luca (IT)</item>
+        <item>Paola (IT)</item>
+    </string-array>
+    <string-array name="speakers_values" translatable="false">
+        <item>Stefan</item>
+        <item>Katrin</item>
+        <item>Dave</item>
+        <item>Susan</item>
+        <item>Simon</item>
+        <item>Kate</item>
+        <item>Bernard</item>
+        <item>Florence</item>
+        <item>Luca</item>
+        <item>Paola</item>
+    </string-array>
 
 </resources>
