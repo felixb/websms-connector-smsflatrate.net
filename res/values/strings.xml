@@ -17,7 +17,7 @@
 <resources>
 
     <string name="app_name" translatable="false">WebSMS Connector: smsflatrate.net</string>
-    <string name="app_version" translatable="false">1.2</string>
+    <string name="app_version" translatable="false">1.3</string>
     <string name="connector_author" translatable="false">Felix Bechstein &lt;f@ub0r.de></string>
     <string name="connector_name" translatable="false">smsflatrate.net</string>
     <string name="connector_preferences">Preferences - smsflatrate.net</string>
