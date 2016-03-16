@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2012 Felix Bechstein -->
+<!--
+		This file is part of WebSMS. This program is free software; you can
+		redistribute it and/or modify it under the terms of the GNU General
+		Public License as published by the Free Software Foundation; either
+		version 3 of the License, or (at your option) any later version.
+-->
+<!--
+		This program is distributed in the hope that it will be useful, but
+		WITHOUT ANY WARRANTY; without even the implied warranty of
+		MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+		General Public License for more details. You should have received a
+		copy of the GNU General Public License along with this program; If
+		not, see <http://www.gnu.org/licenses/>.
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:title="@string/connector_preferences">
+
+    <CheckBoxPreference
+            android:key="enable"
+            android:title="@string/connector_enable"/>
+
+    <EditTextPreference
+            android:dependency="enable"
+            android:key="password"
+            android:title="@string/connector_appkey"/>
+
+    <PreferenceScreen android:title="@string/connector_subconnectors">
+        <CheckBoxPreference
+                android:defaultValue="true"
+                android:key="show_gw1"
+                android:summaryOff="@string/disabled"
+                android:summaryOn="@string/enabled"
+                android:title="@string/connector_gw1_name"/>
+        <CheckBoxPreference
+                android:defaultValue="true"
+                android:key="show_gw2"
+                android:summaryOff="@string/disabled"
+                android:summaryOn="@string/enabled"
+                android:title="@string/connector_gw2_name"/>
+        <CheckBoxPreference
+                android:defaultValue="false"
+                android:key="show_gw3"
+                android:summaryOff="@string/disabled"
+                android:summaryOn="@string/enabled"
+                android:title="@string/connector_gw3_name"/>
+        <CheckBoxPreference
+                android:defaultValue="false"
+                android:key="show_gw4"
+                android:summaryOff="@string/disabled"
+                android:summaryOn="@string/enabled"
+                android:title="@string/connector_gw4_name"/>
+        <CheckBoxPreference
+                android:defaultValue="false"
+                android:key="show_gw10"
+                android:summaryOff="@string/disabled"
+                android:summaryOn="@string/enabled"
+                android:title="@string/connector_gw10_name"/>
+        <CheckBoxPreference
+                android:defaultValue="false"
+                android:key="show_gw11"
+                android:summaryOff="@string/disabled"
+                android:summaryOn="@string/enabled"
+                android:title="@string/connector_gw11_name"/>
+        <CheckBoxPreference
+                android:defaultValue="true"
+                android:key="show_gw20"
+                android:summaryOff="@string/disabled"
+                android:summaryOn="@string/enabled"
+                android:title="@string/connector_gw20_name"/>
+        <CheckBoxPreference
+                android:defaultValue="true"
+                android:key="show_gw21"
+                android:summaryOff="@string/disabled"
+                android:summaryOn="@string/enabled"
+                android:title="@string/connector_gw21_name"/>
+        <CheckBoxPreference
+                android:defaultValue="true"
+                android:key="show_gw30"
+                android:summaryOff="@string/disabled"
+                android:summaryOn="@string/enabled"
+                android:title="@string/connector_gw30_name"/>
+
+        <ListPreference
+                android:defaultValue="Stefan"
+                android:dependency="show_gw30"
+                android:entries="@array/speakers_entries"
+                android:entryValues="@array/speakers_values"
+                android:key="speaker"
+                android:summary="@string/speekers_summary"
+                android:title="@string/connector_gw30_name"/>
+    </PreferenceScreen>
+    <PreferenceScreen
+            android:key="appkey_help"
+            android:title="@string/connector_appkey_help_title"/>
+
+    <CheckBoxPreference
+            android:defaultValue="true"
+            android:dependency="enable"
+            android:disableDependentsState="true"
+            android:key="use_default_sender"
+            android:summary="@string/use_derfault_sender_hint"
+            android:title="@string/use_derfault_sender_"/>
+
+    <EditTextPreference
+            android:dependency="use_default_sender"
+            android:inputType="textEmailAddress"
+            android:key="custom_sender"
+            android:summary="@string/sender_hint"
+            android:title="@string/custom_sender_"/>
+
+    <PreferenceScreen
+            android:key="new_account"
+            android:summary="@string/connector_create_account_hint"
+            android:title="@string/create_account_">
+        <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/connector_create_account_url"/>
+    </PreferenceScreen>
+    <PreferenceScreen
+            android:key="support"
+            android:title="@string/connector_support"/>
+
+</PreferenceScreen>

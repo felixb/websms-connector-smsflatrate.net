@@ -1,6 +1,8 @@
-bin
-gen
-.ant-targets-build.xml
-local.properties
-build.properties
-.settings/org.eclipse.jdt.core.prefs
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+/captures
+/app/gradle.properties
