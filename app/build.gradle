@@ -14,8 +14,8 @@ android {
         applicationId "de.ub0r.android.websms.connector.smsflatratenet"
         minSdkVersion 5
         targetSdkVersion 21
-        versionCode 3130000
-        versionName "1.3"
+        versionCode 5140000
+        versionName "1.4"
     }
 
     signingConfigs {
