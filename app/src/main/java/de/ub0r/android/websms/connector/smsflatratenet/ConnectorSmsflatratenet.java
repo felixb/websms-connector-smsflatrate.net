@@ -282,13 +282,13 @@ public final class ConnectorSmsflatratenet extends BasicConnector {
     }
 
     @Override
-    protected String getUrlBalance(final ArrayList<BasicNameValuePair> d) {
+    protected String getUrlBalance(final Context context, final ArrayList<BasicNameValuePair> d) {
         d.add(new BasicNameValuePair("request", "credits"));
         return URL;
     }
 
     @Override
-    protected String getUrlSend(final ArrayList<BasicNameValuePair> d) {
+    protected String getUrlSend(final Context context, final ArrayList<BasicNameValuePair> d) {
         return URL;
     }
 
@@ -345,7 +345,7 @@ public final class ConnectorSmsflatratenet extends BasicConnector {
             if (TextUtils.isEmpty(htmlText)) {
                 throw new WebSMSException(context, R.string.error);
             }
-            int resp = -1;
+            int resp;
             try {
                 resp = Integer.parseInt(htmlText.trim());
             } catch (NumberFormatException e) {
