@@ -54,7 +54,7 @@
 
         <ListPreference
                 android:defaultValue="Stefan"
-                android:dependency="show_gw30"
+                android:dependency="show_gw_30"
                 android:entries="@array/speakers_entries"
                 android:entryValues="@array/speakers_values"
                 android:key="speaker"
