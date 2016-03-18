@@ -71,19 +71,19 @@ public final class ConnectorSmsflatratenet extends BasicConnector {
         c.setCapabilities(ConnectorSpec.CAPABILITIES_UPDATE
                 | ConnectorSpec.CAPABILITIES_SEND
                 | ConnectorSpec.CAPABILITIES_PREFS);
-        addSubConnectorIfVisible(context, c, ID_GW_1_2, R.string.connector_gw_1_2_name);
-        addSubConnectorIfVisible(context, c, ID_GW_3_4, R.string.connector_gw_3_4_name);
-        addSubConnectorIfVisible(context, c, ID_GW_10_11, R.string.connector_gw_10_11_name);
-        addSubConnectorIfVisible(context, c, ID_GW_30, R.string.connector_gw_30_name);
+        addSubConnectorIfVisible(context, c, ID_GW_1_2, R.string.connector_gw_1_2_name, true);
+        addSubConnectorIfVisible(context, c, ID_GW_3_4, R.string.connector_gw_3_4_name, false);
+        addSubConnectorIfVisible(context, c, ID_GW_10_11, R.string.connector_gw_10_11_name, false);
+        addSubConnectorIfVisible(context, c, ID_GW_30, R.string.connector_gw_30_name, true);
         return c;
     }
 
     private void addSubConnectorIfVisible(final Context context, final ConnectorSpec c,
-            final String id, final int resIdName) {
+            final String id, final int resIdName, final boolean defaultVisibility) {
         SharedPreferences p = PreferenceManager
                 .getDefaultSharedPreferences(context);
 
-        if (p.getBoolean("show_gw_" + id, true)) {
+        if (p.getBoolean("show_gw_" + id, defaultVisibility)) {
             c.addSubConnector(id, context.getString(resIdName),
                     SubConnectorSpec.FEATURE_MULTIRECIPIENTS | SubConnectorSpec.FEATURE_SENDLATER);
         }
